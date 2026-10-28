@@ -3,89 +3,88 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * "Prism" design tokens: bold & colorful.
- * Electric violet primary, hot-pink / amber / teal accents on a lavender-tinted canvas,
- * with a vivid gradient sidebar. Text/background pairs stay WCAG AA in both themes.
+ * GUTECH theme: crimson red (from the university logo) on clean white.
+ * Text/background pairs stay WCAG AA in both themes.
  */
 :root {
-  --background: oklch(0.972 0.014 295);
-  --foreground: oklch(0.2 0.05 285);
+  --background: oklch(0.992 0.003 20);
+  --foreground: oklch(0.2 0.02 20);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.05 285);
+  --card-foreground: oklch(0.2 0.02 20);
   --popover: oklch(1 0 0);
-  --muted: oklch(0.94 0.022 295);
-  --muted-foreground: oklch(0.44 0.045 285);
-  --border: oklch(0.9 0.03 295);
-  --input: oklch(0.84 0.045 295);
+  --muted: oklch(0.966 0.008 20);
+  --muted-foreground: oklch(0.45 0.02 20);
+  --border: oklch(0.915 0.012 20);
+  --input: oklch(0.85 0.02 20);
 
-  --primary: oklch(0.52 0.25 285);
-  --primary-hover: oklch(0.46 0.25 285);
-  --primary-foreground: oklch(0.99 0.005 295);
-  --primary-soft: oklch(0.94 0.05 290);
-  --primary-soft-foreground: oklch(0.4 0.22 285);
-  --ring: oklch(0.6 0.23 285);
+  --primary: oklch(0.43 0.165 22);
+  --primary-hover: oklch(0.37 0.15 22);
+  --primary-foreground: oklch(1 0 0);
+  --primary-soft: oklch(0.955 0.025 20);
+  --primary-soft-foreground: oklch(0.38 0.15 22);
+  --ring: oklch(0.55 0.19 24);
 
-  --accent-pink: oklch(0.64 0.25 352);
-  --accent-amber: oklch(0.82 0.17 80);
-  --accent-teal: oklch(0.72 0.14 190);
+  --accent-pink: oklch(0.58 0.21 25);
+  --accent-amber: oklch(0.93 0.04 20);
+  --accent-teal: oklch(0.7 0.14 22);
 
-  --sidebar: oklch(0.36 0.2 285);
-  --sidebar-foreground: oklch(0.96 0.02 295);
-  --sidebar-muted: oklch(0.8 0.08 290);
-  --sidebar-accent: oklch(0.46 0.22 290);
-  --sidebar-border: oklch(0.45 0.18 285);
+  --sidebar: oklch(0.43 0.165 22);
+  --sidebar-foreground: oklch(0.98 0.01 20);
+  --sidebar-muted: oklch(0.86 0.06 20);
+  --sidebar-accent: oklch(0.5 0.17 24);
+  --sidebar-border: oklch(0.5 0.15 22);
 
-  --success: oklch(0.48 0.13 160);
-  --success-soft: oklch(0.94 0.06 160);
-  --warning: oklch(0.5 0.13 65);
-  --warning-soft: oklch(0.95 0.08 85);
-  --danger: oklch(0.52 0.22 20);
-  --danger-soft: oklch(0.95 0.04 20);
-  --info: oklch(0.5 0.15 245);
-  --info-soft: oklch(0.95 0.035 245);
+  --success: oklch(0.48 0.12 160);
+  --success-soft: oklch(0.95 0.05 160);
+  --warning: oklch(0.5 0.12 65);
+  --warning-soft: oklch(0.96 0.06 85);
+  --danger: oklch(0.5 0.2 27);
+  --danger-soft: oklch(0.95 0.035 20);
+  --info: oklch(0.5 0.12 245);
+  --info-soft: oklch(0.96 0.025 245);
 
-  --shadow-color: 285 60% 30%;
+  --shadow-color: 22 50% 25%;
   --radius: 1.125rem;
 }
 
 .dark {
-  --background: oklch(0.16 0.045 285);
-  --foreground: oklch(0.96 0.015 295);
-  --card: oklch(0.21 0.055 285);
-  --card-foreground: oklch(0.96 0.015 295);
-  --popover: oklch(0.23 0.058 285);
-  --muted: oklch(0.27 0.06 285);
-  --muted-foreground: oklch(0.76 0.045 290);
-  --border: oklch(0.33 0.07 285);
-  --input: oklch(0.39 0.08 285);
+  --background: oklch(0.17 0.02 20);
+  --foreground: oklch(0.96 0.008 20);
+  --card: oklch(0.21 0.025 20);
+  --card-foreground: oklch(0.96 0.008 20);
+  --popover: oklch(0.23 0.027 20);
+  --muted: oklch(0.27 0.03 20);
+  --muted-foreground: oklch(0.76 0.025 20);
+  --border: oklch(0.33 0.035 20);
+  --input: oklch(0.39 0.04 20);
 
-  --primary: oklch(0.72 0.19 295);
-  --primary-hover: oklch(0.78 0.17 295);
-  --primary-foreground: oklch(0.18 0.05 285);
-  --primary-soft: oklch(0.32 0.1 290);
-  --primary-soft-foreground: oklch(0.88 0.09 295);
-  --ring: oklch(0.72 0.19 295);
+  --primary: oklch(0.68 0.19 24);
+  --primary-hover: oklch(0.74 0.17 24);
+  --primary-foreground: oklch(0.16 0.03 20);
+  --primary-soft: oklch(0.31 0.08 22);
+  --primary-soft-foreground: oklch(0.9 0.06 20);
+  --ring: oklch(0.68 0.19 24);
 
-  --accent-pink: oklch(0.74 0.2 352);
-  --accent-amber: oklch(0.84 0.15 82);
-  --accent-teal: oklch(0.78 0.13 190);
+  --accent-pink: oklch(0.7 0.19 25);
+  --accent-amber: oklch(0.9 0.04 20);
+  --accent-teal: oklch(0.76 0.13 22);
 
-  --sidebar: oklch(0.2 0.08 285);
-  --sidebar-foreground: oklch(0.95 0.015 295);
-  --sidebar-muted: oklch(0.74 0.06 290);
-  --sidebar-accent: oklch(0.3 0.11 288);
-  --sidebar-border: oklch(0.3 0.08 285);
+  --sidebar: oklch(0.34 0.13 22);
+  --sidebar-foreground: oklch(0.97 0.01 20);
+  --sidebar-muted: oklch(0.8 0.05 20);
+  --sidebar-accent: oklch(0.42 0.15 23);
+  --sidebar-border: oklch(0.42 0.12 22);
 
   --success: oklch(0.78 0.14 160);
   --success-soft: oklch(0.3 0.06 160);
   --warning: oklch(0.82 0.14 82);
   --warning-soft: oklch(0.32 0.06 82);
-  --danger: oklch(0.75 0.16 20);
-  --danger-soft: oklch(0.3 0.07 20);
+  --danger: oklch(0.76 0.15 25);
+  --danger-soft: oklch(0.3 0.07 22);
   --info: oklch(0.77 0.11 245);
   --info-soft: oklch(0.3 0.06 245);
 
-  --shadow-color: 285 80% 3%;
+  --shadow-color: 20 60% 3%;
 }
 @theme inline {
   --color-background: var(--background);
@@ -172,7 +171,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  /* vivid prism glow behind the page, purely decorative */
+  /* soft red glow behind the page, purely decorative */
   body::before {
     content: '';
     position: fixed;
@@ -180,9 +179,8 @@
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(52rem 26rem at 90% -8%, color-mix(in oklab, var(--accent-pink) 16%, transparent), transparent 70%),
-      radial-gradient(56rem 28rem at 10% -12%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 70%),
-      radial-gradient(44rem 24rem at 100% 105%, color-mix(in oklab, var(--accent-teal) 12%, transparent), transparent 70%);
+      radial-gradient(52rem 26rem at 90% -8%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 70%),
+      radial-gradient(44rem 24rem at 0% 105%, color-mix(in oklab, var(--primary) 7%, transparent), transparent 70%);
   }
   h1, h2, h3 {
     letter-spacing: -0.02em;
@@ -248,4 +246,5 @@
 .prose-lms pre { background: var(--muted); padding: 0.8em 1em; border-radius: var(--radius-md); overflow-x: auto; }
 .prose-lms pre code { background: none; padding: 0; }
 .prose-lms blockquote { border-left: 3px solid var(--primary); padding-left: 0.9em; color: var(--muted-foreground); }
+
 

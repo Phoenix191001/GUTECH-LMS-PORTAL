@@ -13,13 +13,13 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className="grid min-h-dvh lg:grid-cols-[1.05fr_1fr]">
       {/* Brand panel (desktop) */}
-      <aside className="relative hidden overflow-hidden bg-gradient-to-br from-sidebar via-primary to-[oklch(0.45_0.25_340)] p-12 text-white lg:flex lg:flex-col lg:justify-between">
+      <aside className="relative hidden overflow-hidden bg-gradient-to-br from-primary to-[oklch(0.33_0.14_22)] p-12 text-white lg:flex lg:flex-col lg:justify-between">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              'radial-gradient(40rem 26rem at 15% 0%, oklch(0.8 0.17 80 / 0.35), transparent 65%), radial-gradient(34rem 24rem at 100% 100%, oklch(0.72 0.14 190 / 0.4), transparent 60%)',
+              'radial-gradient(40rem 26rem at 15% 0%, oklch(0.65 0.2 25 / 0.4), transparent 65%), radial-gradient(34rem 24rem at 100% 100%, oklch(0.9 0.05 20 / 0.15), transparent 60%)',
           }}
         />
         <div
@@ -29,12 +29,12 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         />
         <Logo tone="light" className="relative" />
         <div className="relative max-w-lg">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-amber">{BRAND.product}</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">{BRAND.product}</p>
           <h2 className="mt-4 font-display text-5xl font-extrabold leading-[1.05] text-white text-balance">{BRAND.tagline}</h2>
           <ul className="mt-10 space-y-4">
             {POINTS.map(({ icon: Icon, text }) => (
               <li key={text} className="flex items-start gap-3.5 text-[0.9375rem] text-sidebar-foreground/90">
-                <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-lg bg-white/20 text-accent-amber">
+                <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-lg bg-white/20 text-white">
                   <Icon className="size-4" />
                 </span>
                 {text}
@@ -47,7 +47,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
       {/* Form column */}
       <main id="main" className="flex min-h-dvh flex-col px-5 py-8 sm:px-10">
-        <Logo className="lg:hidden" />
+        <Logo className="h-12 w-40 lg:hidden" />
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-10">{children}</div>
         <p className="text-center text-xs text-muted-foreground lg:hidden">Need an account? Ask your administrator.</p>
       </main>

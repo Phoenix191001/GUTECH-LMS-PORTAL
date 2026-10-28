@@ -26,7 +26,7 @@ export default async function ProfilePage() {
       <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-6">
           <Card className="overflow-hidden">
-            <div aria-hidden className="h-24 bg-gradient-to-r from-primary via-accent-pink to-accent-amber" />
+            <div aria-hidden className="h-24 bg-gradient-to-r from-primary to-accent-pink" />
             <CardContent className="-mt-12 space-y-6 pt-0">
               <AvatarEditor name={profile.full_name} avatarUrl={avatarUrl} hasAvatar={!!profile.avatar_url} />
               <NameForm fullName={profile.full_name} />

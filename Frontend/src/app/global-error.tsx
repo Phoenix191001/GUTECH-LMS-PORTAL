@@ -10,7 +10,7 @@ export default function GlobalError({ reset }: { error: Error & { digest?: strin
           <p style={{ color: '#555' }}>Please try again.</p>
           <button
             onClick={reset}
-            style={{ marginTop: 16, padding: '10px 18px', borderRadius: 10, border: 0, background: '#6d3df0', color: '#fff', fontSize: 16 }}
+            style={{ marginTop: 16, padding: '10px 18px', borderRadius: 10, border: 0, background: '#9b1b24', color: '#fff', fontSize: 16 }}
           >
             Reload
           </button>

@@ -12,7 +12,7 @@ export const DialogTrigger = DialogPrimitive.Trigger
 export const DialogClose = DialogPrimitive.Close
 
 const overlay =
-  'fixed inset-0 z-50 bg-[oklch(0.14_0.07_285/0.6)] backdrop-blur-[3px] data-[state=open]:animate-fade-in'
+  'fixed inset-0 z-50 bg-[oklch(0.15_0.04_20/0.6)] backdrop-blur-[3px] data-[state=open]:animate-fade-in'
 
 type Variant = 'modal' | 'drawer-right' | 'drawer-left'
 

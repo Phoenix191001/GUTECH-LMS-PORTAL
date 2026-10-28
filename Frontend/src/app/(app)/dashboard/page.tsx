@@ -25,10 +25,10 @@ export default async function DashboardPage() {
   return (
     <div className="space-y-8">
       {/* Greeting */}
-      <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary via-[oklch(0.5_0.25_310)] to-[oklch(0.58_0.25_350)] p-6 text-white shadow-[var(--shadow-lift)] sm:p-10">
-        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(34rem 18rem at 100% 0%, oklch(0.7 0.25 352 / 0.5), transparent 65%), radial-gradient(24rem 14rem at 0% 100%, oklch(0.72 0.14 190 / 0.4), transparent 60%)' }} />
+      <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-[oklch(0.33_0.14_22)] p-6 text-white shadow-[var(--shadow-lift)] sm:p-10">
+        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(34rem 18rem at 100% 0%, oklch(0.65 0.2 25 / 0.45), transparent 65%), radial-gradient(24rem 14rem at 0% 100%, oklch(0.9 0.05 20 / 0.18), transparent 60%)' }} />
         <div className="relative">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-amber">{user.profile.role === 'admin' ? 'Administrator' : user.profile.role === 'teacher' ? 'Teacher' : 'Student'}</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">{user.profile.role === 'admin' ? 'Administrator' : user.profile.role === 'teacher' ? 'Teacher' : 'Student'}</p>
           <h1 className="mt-2 font-display text-3xl font-extrabold text-white text-balance sm:text-5xl">Welcome back, {first}</h1>
           <p className="mt-2 max-w-xl text-sm text-white/85 sm:text-base">
             {user.profile.role === 'student' ? "Here's what needs your attention." : user.profile.role === 'teacher' ? 'Here is what is waiting for you in your courses.' : 'A quick look at the whole institution.'}

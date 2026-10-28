@@ -61,13 +61,13 @@ function SidebarLinks({ role, counts, onNavigate }: { role: UserRole; counts: Sh
                     )}
                   >
                     
-                    <item.icon className={cn('size-[1.125rem]', active ? 'text-accent-pink' : 'text-sidebar-muted group-hover:text-white')} />
+                    <item.icon className={cn('size-[1.125rem]', active ? 'text-primary' : 'text-sidebar-muted group-hover:text-white')} />
                     <span className="flex-1">{item.label}</span>
                     {badge &&
                       (badge.dot ? (
-                        <span className="size-2.5 rounded-full bg-accent-amber" aria-label="New updates" />
+                        <span className="size-2.5 rounded-full bg-white" aria-label="New updates" />
                       ) : (
-                        <span className="grid min-w-5 place-items-center rounded-full bg-accent-amber px-1.5 text-[0.6875rem] font-bold text-[oklch(0.25_0.06_70)]">
+                        <span className="grid min-w-5 place-items-center rounded-full bg-white px-1.5 text-[0.6875rem] font-bold text-primary">
                           {badge.text}
                         </span>
                       ))}
@@ -218,7 +218,7 @@ export function AppShell({
   return (
     <div className="min-h-dvh lg:pl-[19rem]">
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-3 left-3 z-30 hidden w-72 flex-col overflow-hidden rounded-[2rem] bg-gradient-to-b from-sidebar via-sidebar to-[oklch(0.3_0.22_320)] text-sidebar-foreground shadow-[var(--shadow-lift)] lg:flex">
+      <aside className="fixed inset-y-3 left-3 z-30 hidden w-72 flex-col overflow-hidden rounded-[2rem] bg-gradient-to-b from-sidebar via-sidebar to-[oklch(0.3_0.13_22)] text-sidebar-foreground shadow-[var(--shadow-lift)] lg:flex">
         <div className="px-6 pb-4 pt-6">
           <Logo tone="light" />
         </div>
@@ -239,7 +239,7 @@ export function AppShell({
       <header className="sticky top-0 z-20 px-3 pt-3 sm:px-6">
         <div className="glass mx-auto flex h-16 max-w-6xl items-center gap-2 rounded-full border-2 border-border/70 px-4 shadow-[var(--shadow-soft)] sm:px-5">
           <Link href="/dashboard" className="mr-1 lg:hidden" aria-label="Dashboard">
-            <Logo className="[&>span:last-child]:hidden" />
+            <Logo className="h-10 w-32 rounded-xl" />
           </Link>
           <CourseSwitcher courses={courses} />
           <div className="ml-auto flex items-center gap-1">
@@ -307,7 +307,7 @@ export function AppShell({
               <UserRound className="size-[1.125rem] text-sidebar-muted" /> Profile
             </Link>
             <form action={signOut}>
-              <button type="submit" className="flex w-full items-center gap-3 rounded-full px-4 py-2.5 text-sm font-semibold text-[oklch(0.85_0.12_25)] hover:bg-white/15">
+              <button type="submit" className="flex w-full items-center gap-3 rounded-full px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15">
                 <LogOut className="size-[1.125rem]" /> Sign out
               </button>
             </form>

@@ -60,7 +60,7 @@ export default async function CoursesPage() {
                   href={`/courses/${course.id}/resources`}
                   className="group relative block h-full overflow-hidden rounded-2xl border bg-card p-5 shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
                 >
-                  <span aria-hidden className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-primary via-accent-pink to-accent-amber opacity-80 transition-opacity group-hover:opacity-100" />
+                  <span aria-hidden className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-primary to-accent-pink opacity-90 transition-opacity group-hover:opacity-100" />
                   <div className="flex items-start justify-between gap-3">
                     <Badge tone="primary" className="font-semibold tracking-wide">{course.code}</Badge>
                     {!course.is_active && <Badge tone="warning">Inactive</Badge>}
