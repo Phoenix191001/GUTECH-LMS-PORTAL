@@ -1,0 +1,16 @@
+{
+  "name": "lms-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Supabase backend for the Internal LMS: migrations, seed and admin bootstrap scripts.",
+  "scripts": {
+    "bootstrap-admin": "node --env-file=.env scripts/bootstrap-admin.mjs",
+    "seed": "node --env-file=.env scripts/seed.mjs",
+    "migrate": "node --env-file=.env scripts/migrate.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "pg": "^8.23.1"
+  }
+}

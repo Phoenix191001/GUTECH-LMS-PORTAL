@@ -1,0 +1,32 @@
+# Local Supabase CLI configuration (`supabase start`). Cloud settings are in the dashboard.
+project_id = "internal-lms"
+
+[api]
+enabled = true
+schemas = ["public", "storage"]
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/confirm"]
+jwt_expiry = 3600
+enable_refresh_token_rotation = true
+# Closed system: accounts are created by an admin only.
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+enable_confirmations = false
+double_confirm_changes = true
+max_frequency = "60s"
+
+[auth.email.template.recovery]
+subject = "Reset your LMS password"
+content_path = "./supabase/templates/recovery.html"
+
+[storage]
+enabled = true
+file_size_limit = "50MiB"
+
+[realtime]
+enabled = true
