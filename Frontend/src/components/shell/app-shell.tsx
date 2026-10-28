@@ -219,8 +219,8 @@ export function AppShell({
     <div className="min-h-dvh lg:pl-[19rem]">
       {/* Desktop sidebar */}
       <aside className="fixed inset-y-3 left-3 z-30 hidden w-72 flex-col overflow-hidden rounded-[2rem] bg-gradient-to-b from-sidebar via-sidebar to-[oklch(0.3_0.13_22)] text-sidebar-foreground shadow-[var(--shadow-lift)] lg:flex">
-        <div className="px-6 pb-4 pt-6">
-          <Logo tone="light" />
+        <div className="flex justify-center px-4 pb-4 pt-6">
+          <Logo tone="light" className="w-full" />
         </div>
         <SidebarLinks role={user.role} counts={counts} />
         <Link
@@ -294,8 +294,8 @@ export function AppShell({
         <DialogContent variant="drawer-left" className="border-sidebar-border bg-sidebar text-sidebar-foreground [&_button[aria-label=Close]]:text-sidebar-muted">
           <DialogTitle className="sr-only">Navigation</DialogTitle>
           <DialogDescription className="sr-only">All sections of the app</DialogDescription>
-          <div className="px-6 pb-3 pt-6">
-            <Logo tone="light" />
+          <div className="flex justify-center px-4 pb-3 pt-6">
+            <Logo tone="light" className="w-full" />
           </div>
           <SidebarLinks role={user.role} counts={counts} onNavigate={() => setMoreOpen(false)} />
           <div className="space-y-1 border-t border-sidebar-border p-3 pb-safe">
