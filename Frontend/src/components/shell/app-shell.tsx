@@ -127,11 +127,9 @@ function UserMenu({ user }: { user: ShellUser }) {
         <DropdownMenuSeparator />
         <ThemeItems />
         <DropdownMenuSeparator />
-        <form action={signOut}>
-          <DropdownMenuItem asChild destructive>
-            <button type="submit" className="w-full"><LogOut /> Sign out</button>
-          </DropdownMenuItem>
-        </form>
+        <DropdownMenuItem destructive onSelect={() => { void signOut() }}>
+          <LogOut /> Sign out
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
