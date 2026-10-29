@@ -1,8 +1,12 @@
-// Local development seed (spec Section 6): 1 admin, 2 teachers, 5 students, 2 courses.
+﻿// Local development seed (spec Section 6): 1 admin, 2 teachers, 5 students, 2 courses.
 // Idempotent: safe to run more than once. Usage: `npm run seed`.
 import { admin, ensureUser } from './_client.mjs'
 
-const password = process.env.SEED_PASSWORD || 'Welcome-12345'
+const password = process.env.SEED_PASSWORD
+if (!password) {
+  console.error('Set SEED_PASSWORD in Backend/.env first (the shared password for the demo accounts).')
+  process.exit(1)
+}
 
 const adminId = await ensureUser({
   email: process.env.ADMIN_EMAIL || 'admin@example.edu',
