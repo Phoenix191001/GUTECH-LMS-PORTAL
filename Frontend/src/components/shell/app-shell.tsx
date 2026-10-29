@@ -239,7 +239,7 @@ export function AppShell({
       <header className="sticky top-0 z-20 px-3 pt-3 sm:px-6">
         <div className="glass mx-auto flex h-16 max-w-6xl items-center gap-2 rounded-full border-2 border-border/70 px-4 shadow-[var(--shadow-soft)] sm:px-5">
           <Link href="/dashboard" className="mr-1 lg:hidden" aria-label="Dashboard">
-            <Logo className="h-10 w-32 rounded-xl" />
+            <Logo className="w-28" />
           </Link>
           <CourseSwitcher courses={courses} />
           <div className="ml-auto flex items-center gap-1">

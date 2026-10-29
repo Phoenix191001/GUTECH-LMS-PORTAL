@@ -19,7 +19,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              'radial-gradient(40rem 26rem at 15% 0%, oklch(0.65 0.2 25 / 0.4), transparent 65%), radial-gradient(34rem 24rem at 100% 100%, oklch(0.9 0.05 20 / 0.15), transparent 60%)',
+              'radial-gradient(40rem 26rem at 100% 100%, oklch(0.65 0.2 25 / 0.4), transparent 65%), radial-gradient(34rem 24rem at 0% 100%, oklch(0.9 0.05 20 / 0.15), transparent 60%)',
           }}
         />
         <div
@@ -27,7 +27,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
           style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '22px 22px' }}
         />
-        <Logo tone="light" className="relative" />
+        <Logo tone="light" className="relative -ml-5 w-56" />
         <div className="relative max-w-lg">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">{BRAND.product}</p>
           <h2 className="mt-4 font-display text-5xl font-extrabold leading-[1.05] text-white text-balance">{BRAND.tagline}</h2>
@@ -47,7 +47,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
       {/* Form column */}
       <main id="main" className="flex min-h-dvh flex-col px-5 py-8 sm:px-10">
-        <Logo className="h-12 w-40 lg:hidden" />
+        <Logo className="w-40 lg:hidden" />
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-10">{children}</div>
         <p className="text-center text-xs text-muted-foreground lg:hidden">Need an account? Ask your administrator.</p>
       </main>
