@@ -47,7 +47,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
       {/* Form column */}
       <main id="main" className="flex min-h-dvh flex-col px-5 py-8 sm:px-10">
-        <Logo className="w-40 lg:hidden" />
+        <Logo className="mx-auto w-44 lg:hidden" />
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-10">{children}</div>
         <p className="text-center text-xs text-muted-foreground lg:hidden">Need an account? Ask your administrator.</p>
       </main>
