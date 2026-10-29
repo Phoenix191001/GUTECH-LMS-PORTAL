@@ -1,4 +1,4 @@
-# Lumen LMS: Frontend
+﻿# GUTECH Portal: Frontend
 
 Next.js 16 (App Router) + TypeScript (strict) + Tailwind v4 + Supabase (`@supabase/ssr`).
 Server Components by default; Server Actions for every mutation. The database lives in `../Backend`.
@@ -45,8 +45,7 @@ and shown in the viewer's time zone; every list has loading, empty and error sta
 
 ## Design
 
-"Ember & Ink": warm ivory paper, deep ink-navy chrome and a single terracotta-ember accent, a serif display face
-for headings over the system sans stack, light/dark themes (OS default + manual toggle in the user menu and
+GUTECH red (#9b1c25, taken from the official logo) on clean white, bold sans-serif headings, light/dark themes (OS default + manual toggle in the user menu and
 Profile). Mobile first: 360 px minimum, bottom navigation + drawer on phones, tables become stacked cards,
 16 px inputs (no iOS zoom), safe-area padding, 44 px touch targets, `prefers-reduced-motion` respected.
 

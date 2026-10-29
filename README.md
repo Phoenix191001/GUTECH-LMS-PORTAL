@@ -1,4 +1,4 @@
-# GUTECH Portal
+﻿# GUTECH Portal
 
 A student/faculty portal: courses, resources, assignments, quizzes, marks, announcements, realtime course chat and
 complaints, with three roles (admin, teacher, student). Closed system: accounts are created by an administrator.
@@ -8,7 +8,9 @@ complaints, with three roles (admin, teacher, student). Closed system: accounts 
 | Frontend | React 19 via Next.js 16 (App Router), TypeScript, Tailwind v4 |
 | Backend | Node.js: Next.js Server Actions / route handlers + Node ops scripts (`Backend/scripts`) |
 | Database + Auth + Storage + Realtime | Supabase (Postgres, Row Level Security, private buckets) |
-| Deployment | Vercel (Frontend) + Supabase cloud |
+| Deployment | Vercel (Frontend, Singapore region `sin1`) + Supabase cloud (`ap-southeast-1`) |
+
+**Live demo:** https://gutech-lms-portal-tau.vercel.app
 
 ## Repository layout
 
@@ -63,7 +65,8 @@ npm run typecheck && npm test && npm run build
 1. Push this repo to GitHub (public).
 2. Vercel -> New Project -> import the repo, set **Root Directory** to `Frontend`.
 3. Add the four `Frontend/.env.local` variables as Vercel environment variables, with `NEXT_PUBLIC_SITE_URL` set to the production URL.
-4. Deploy, then add `<production-url>` and `<production-url>/auth/confirm` to Supabase's redirect allow list.
+4. Functions run in Singapore (`Frontend/vercel.json`) to sit next to the Supabase project; change `regions` if your project is elsewhere.
+5. Deploy, then add `<production-url>` and `<production-url>/auth/confirm` to Supabase's redirect allow list.
 
 ## Architecture notes
 
@@ -74,4 +77,4 @@ npm run typecheck && npm test && npm run build
 ## AI-assisted workflow
 
 Built with Claude Code from `Internal LMS AI Build Spec (Next.js + Supabase).pdf`: schema and RLS first, then the
-feature slices, then a design pass ("Prism" theme).
+feature slices, then a design pass (red and white GUTECH theme with the official logo).
