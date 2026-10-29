@@ -182,6 +182,18 @@
       radial-gradient(52rem 26rem at 90% -8%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 70%),
       radial-gradient(44rem 24rem at 0% 105%, color-mix(in oklab, var(--primary) 7%, transparent), transparent 70%);
   }
+  /* native <select> popups are drawn by the browser: give them theme colors so options are always readable */
+  html { color-scheme: light; }
+  html.dark { color-scheme: dark; }
+  select option,
+  select optgroup {
+    background-color: var(--popover);
+    color: var(--foreground);
+  }
+  select option:checked {
+    background-color: var(--primary-soft);
+    color: var(--primary-soft-foreground);
+  }
   h1, h2, h3 {
     letter-spacing: -0.02em;
     font-weight: 750;
