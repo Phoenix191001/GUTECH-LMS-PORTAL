@@ -8,14 +8,14 @@ import { requireUser, type AppUser } from '@/lib/auth'
 import { loadFeed } from '@/features/announcements/queries'
 import { quizState } from '@/features/quizzes/logic'
 import { loadDirectory } from '@/features/shared/directory'
-import { cn, num, percent } from '@/lib/utils'
+import { cn, firstName, num, percent } from '@/lib/utils'
 
 export const metadata: Metadata = { title: 'Dashboard' }
 export const dynamic = 'force-dynamic'
 
 export default async function DashboardPage() {
   const user = await requireUser()
-  const first = user.profile.full_name.split(' ')[0]
+  const first = firstName(user.profile.full_name)
 
   const [feed, globals] = await Promise.all([
     loadFeed(user.supabase, user.id, { all: true }, { limit: 5 }).catch(() => ({ items: [], total: 0 })),

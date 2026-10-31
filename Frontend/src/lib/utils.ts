@@ -1,4 +1,4 @@
-import { clsx, type ClassValue } from 'clsx'
+﻿import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
@@ -13,8 +13,22 @@ export function formatBytes(bytes: number | null | undefined): string {
   return `${(bytes / 1024 ** 3).toFixed(1)} GB`
 }
 
-export function initials(name: string | null | undefined): string {
+const TITLES = /^(dr|prof|professor|mr|mrs|ms|miss|engr|sir|madam)\.?$/i
+
+/** Name split into words, without leading titles like Dr. or Prof.. */
+function nameParts(name: string | null | undefined): string[] {
   const parts = (name ?? '').trim().split(/\s+/).filter(Boolean)
+  while (parts.length > 1 && TITLES.test(parts[0]!)) parts.shift()
+  return parts
+}
+
+/** Friendly first name for greetings: Dr. Amna Siddiqui -> Amna. */
+export function firstName(name: string | null | undefined): string {
+  return nameParts(name)[0] ?? ''
+}
+
+export function initials(name: string | null | undefined): string {
+  const parts = nameParts(name)
   if (parts.length === 0) return '?'
   return ((parts[0]?.[0] ?? '') + (parts.length > 1 ? (parts[parts.length - 1]?.[0] ?? '') : '')).toUpperCase()
 }
