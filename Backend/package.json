@@ -7,6 +7,7 @@
   "scripts": {
     "bootstrap-admin": "node --env-file=.env scripts/bootstrap-admin.mjs",
     "seed": "node --env-file=.env scripts/seed.mjs",
+    "seed:more": "node --env-file=.env scripts/seed-more.mjs",
     "migrate": "node --env-file=.env scripts/migrate.mjs"
   },
   "dependencies": {
